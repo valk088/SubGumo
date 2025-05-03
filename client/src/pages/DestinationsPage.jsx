@@ -32,7 +32,7 @@ const DestinationsPage = () => {
   const [trips, setTrips] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const API_URL = 'http://localhost:3001/api'; // Ensure this points to your backend
+  const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api'; // Use env variable or fallback
 
   // Fetch trips from the API
   useEffect(() => {
