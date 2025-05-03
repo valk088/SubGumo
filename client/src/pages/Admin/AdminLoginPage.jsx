@@ -8,7 +8,7 @@ function AdminLoginPage() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   // const { login } = useAuth(); // Replace with your actual login function
-  const API_URL = 'http://localhost:3001/api'; // Define backend URL
+  const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api'; // Use env variable or fallback
 
   const handleLogin = async (e) => {
     e.preventDefault();
