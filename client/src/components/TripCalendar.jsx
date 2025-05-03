@@ -26,7 +26,7 @@ const TripCalendar = () => {
     const [selectedItinerary, setSelectedItinerary] = useState(null);
     const [selectedTripTitle, setSelectedTripTitle] = useState(''); // To show in modal title
 
-    const API_URL = 'http://localhost:3001/api';
+    const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api';
 
     // --- Fetching Logic --- 
     useEffect(() => {
